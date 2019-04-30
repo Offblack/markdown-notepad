@@ -1,3 +1,7 @@
+import {
+   debug
+} from "util";
+
 let notesList = [{
       id: 1,
       title: 'Notatka pierwsza - 1',
@@ -39,4 +43,18 @@ export function remove(noteId) {
    notesList = notesList.filter(note => note.id !== noteId);
    console.log(`${noteId} - removed`);
    console.log(notesList);
+}
+
+export function save(noteId, noteContent) {
+   notesList = notesList.map(note => {
+
+      if (note.id === noteId) {
+         note.body = noteContent;
+         note.lastModified = new Date();
+      }
+
+
+      return note;
+
+   })
 }
