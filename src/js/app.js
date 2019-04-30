@@ -1,1 +1,1 @@
-import './editor/notes-sidebar/main';
+import './editor/notes-sidebar/index';
