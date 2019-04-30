@@ -1,7 +1,3 @@
-import {
-   debug
-} from "util";
-
 let notesList = [{
       id: 1,
       title: 'Notatka pierwsza - 1',
