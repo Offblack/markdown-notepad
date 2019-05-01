@@ -47,6 +47,7 @@ export function save(noteId, noteContent) {
       if (note.id === noteId) {
          note.body = noteContent;
          note.lastModified = new Date();
+         console.log(`${note.id} - saved`);
       }
 
 
