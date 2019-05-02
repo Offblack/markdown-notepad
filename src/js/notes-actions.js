@@ -2,25 +2,25 @@ let notesList = [{
       id: 1,
       title: 'Notatka pierwsza - 1',
       body: '# Moja notatka',
-      lastModified: '18/06/2018 14:00'
+      lastModified: 1556707990074
    },
    {
       id: 2,
       title: 'Notatka 2',
       body: '# Moja notatka',
-      lastModified: '18/06/2018 14:00'
+      lastModified: 1556707990074
    },
    {
       id: 3,
       title: 'Notatka 3',
       body: '# Moja notatka',
-      lastModified: '18/06/2018 14:00'
+      lastModified: 1556707990074
    },
    {
       id: 4,
       title: 'Notatka 4',
       body: '# Moja notatka',
-      lastModified: '18/06/2018 14:00'
+      lastModified: 1556707990074
    }
 ];
 
@@ -31,7 +31,7 @@ export function getAll() {
 export function add(title) {
    notesList.push({
       title,
-      lastModified: '18/06/2018 14:00'
+      lastModified: Date.now()
    });
 }
 
