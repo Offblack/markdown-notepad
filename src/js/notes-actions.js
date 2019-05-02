@@ -1,28 +1,11 @@
-let notesList = [{
-      id: 1,
-      title: 'Notatka pierwsza - 1',
-      body: '# Moja notatka',
-      lastModified: 1556707990074
-   },
-   {
-      id: 2,
-      title: 'Notatka 2',
-      body: '# Moja notatka',
-      lastModified: 1556707990074
-   },
-   {
-      id: 3,
-      title: 'Notatka 3',
-      body: '# Moja notatka',
-      lastModified: 1556707990074
-   },
-   {
-      id: 4,
-      title: 'Notatka 4',
-      body: '# Moja notatka',
-      lastModified: 1556707990074
-   }
-];
+import axios from '../axios-api';
+
+axios.get('/notes')
+   .then(function (response) {
+      console.log(response);
+   })
+
+let notesList = [];
 
 export function getAll() {
    return notesList;
