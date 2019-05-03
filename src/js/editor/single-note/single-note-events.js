@@ -50,6 +50,6 @@ export function noteSaveHandler(noteId) {
 
       const noteContent = DOM.noteContentEl.value;
 
-      noteActions.save(noteId);
+      noteActions.save(noteId, noteContent);
    })
 };

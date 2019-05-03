@@ -8,8 +8,9 @@ export function init(onChangeCallback) {
       const noteTitle = DOM.noteTitle.value.trim();
 
       if (noteTitle) {
-         notesActions.add(noteTitle);
-         onChangeCallback();
+         notesActions.add(noteTitle).then(notes => {
+            onChangeCallback();
+         });
       }
    });
 }

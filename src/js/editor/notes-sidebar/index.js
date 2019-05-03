@@ -19,16 +19,13 @@ const generateNoteHTML = note => {
 };
 
 const generateNotesList = () => {
+   notesActions.getAll().then(notes => {
+      const html = notes.filter(note => normalizeText(note.title).includes(normalizeText(searchBox.getSearchPhrase())))
+         .map(note => generateNoteHTML(note))
+         .join('');
 
-   const html = notesActions
-      .getAll()
-      .filter(note =>
-         normalizeText(note.title).includes(normalizeText(searchBox.getSearchPhrase()))
-      )
-      .map(note => generateNoteHTML(note))
-      .join('');
-
-   DOM.notesListEl.innerHTML = html;
+      DOM.notesListEl.innerHTML = html;
+   })
 };
 
 generateNotesList();
