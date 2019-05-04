@@ -10,7 +10,8 @@ export function getAll() {
 export function add(title) {
    return new Promise((resolve, reject) => axios.post('/notes', {
          title,
-         lastModified: Date.now()
+         lastModified: Date.now(),
+         body: ""
       })
       .then(response => response.data)
       .then(notes => resolve(notes))

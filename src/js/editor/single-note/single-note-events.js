@@ -1,6 +1,7 @@
 import DOM from '../../dom';
 import * as noteActions from '../../notes-actions';
 import showdown from 'showdown';
+import page from 'page';
 
 const mdConverter = new showdown.Converter();
 
@@ -38,7 +39,7 @@ export function noteShowPreviewHandler() {
 // Remove
 export function noteRemoveHandler(noteId) {
    DOM().noteRemoveBtn.addEventListener('click', function () {
-      noteActions.remove(noteId);
+      noteActions.remove(noteId).then(() => page('/editor'));
    })
 }
 

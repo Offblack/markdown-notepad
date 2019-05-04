@@ -9,6 +9,7 @@ const init = noteId => {
       let noteToShow = (!noteId) ? notes[0] : notes.find(note => note.id === noteId);
 
       singleNoteInit(noteToShow);
+
    })
 }
 
