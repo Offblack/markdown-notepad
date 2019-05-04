@@ -11,12 +11,12 @@ import * as addBox from './add-box';
 const generateNoteHTML = (note, currentNoteId, notes) => {
    return `<a href="/editor/${
       note.id
-   }" class="list-group-item list-group-item-action d-flex justify-content-between lh-condensed ${
+   }" class="list-group-item list-group-item-action ${
       currentNoteId === note.id ? 'active' : ''
    } ${ (notes.indexOf(note) === 0 && (!currentNoteId)) ? 'active' : '' }">
       <div>
          <h6 class="my-0">${note.title}</h6>
-         <small class="text-muted">${format(note.lastModified, 'DD/MM/YYYY | HH:mm:ss')}</small>
+         <small>Ostatnia zmiana: ${format(note.lastModified, 'DD/MM/YYYY | HH:mm:ss')}</small>
       </div>
    </a>`;
 };

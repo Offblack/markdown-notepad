@@ -1,1 +1,12 @@
-@import './vendor.scss';
+@import 'vendor';
+
+#view-container {
+   min-height: 100vh;
+}
+
+.row-centered {
+   display: flex;
+   min-height: 100vh;
+   justify-content: center;
+   align-items: center;
+}

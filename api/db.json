@@ -1,12 +1,6 @@
 {
   "notes": [
     {
-      "title": "Notatka 1",
-      "lastModified": 1556980971157,
-      "id": 1,
-      "body": "To moja pierwsza notatka #Essa"
-    },
-    {
       "title": "Notatka 2",
       "lastModified": 1556980860547,
       "id": 2
@@ -15,6 +9,12 @@
       "title": "Notatka 3",
       "lastModified": 1556980860547,
       "id": 3
+    },
+    {
+      "title": "Notatka 1",
+      "lastModified": 1556986728383,
+      "body": "",
+      "id": 4
     }
   ]
 }
