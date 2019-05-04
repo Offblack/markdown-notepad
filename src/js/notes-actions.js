@@ -1,4 +1,4 @@
-import axios from '../axios-api';
+import axios from './axios-api';
 
 export function getAll() {
    return new Promise((resolve, reject) => axios.get('/notes')

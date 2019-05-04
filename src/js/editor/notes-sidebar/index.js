@@ -1,4 +1,4 @@
-import DOM from '../dom';
+import DOM from '../../dom';
 import {
    format
 } from 'date-fns';
@@ -24,11 +24,17 @@ const generateNotesList = () => {
          .map(note => generateNoteHTML(note))
          .join('');
 
-      DOM.notesListEl.innerHTML = html;
+      DOM().notesListEl.innerHTML = html;
    })
 };
 
-generateNotesList();
+const init = () => {
 
-searchBox.init(() => generateNotesList());
-addBox.init(() => generateNotesList());
+   generateNotesList();
+
+   searchBox.init(() => generateNotesList());
+   addBox.init(() => generateNotesList());
+
+}
+
+export default init;
