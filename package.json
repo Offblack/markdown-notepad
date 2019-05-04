@@ -16,6 +16,7 @@
       "bootstrap": "^4.3.1",
       "date-fns": "^1.30.1",
       "es6-promise": "^4.2.6",
+      "page": "^1.11.4",
       "showdown": "^1.9.0"
    },
    "devDependencies": {
