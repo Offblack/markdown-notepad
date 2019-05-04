@@ -1,87 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-      <meta
-         name="description"
-         content="To aplikacja służąca tworzeniu i przechowywaniu własnych notatek."
-      />
 
-      <title>Aplikacja Notatki</title>
-   </head>
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+   <meta name="description" content="To aplikacja służąca tworzeniu i przechowywaniu własnych notatek." />
 
-   <body>
-      <div class="container">
-         <div class="py-5 text-center">
-            <h2>Checkout form</h2>
-            <p class="lead">
-               Below is an example form built entirely with Bootstrap's form controls. Each required
-               form group has a validation state that can be triggered by attempting to submit the
-               form without completing it.
-            </p>
-         </div>
+   <title>Aplikacja Notatki</title>
+</head>
 
-         <div class="row">
-            <div class="col-md-4 mb-4">
-               <form class="card p-2 mb-3">
-                  <div class="form-group">
-                     <label for="search-input">Szukaj notatki (wg tytułu)</label>
-                     <input
-                        type="text"
-                        id="search-input"
-                        class="form-control"
-                        placeholder="Szukaj..."
-                     />
-                  </div>
-               </form>
-               <form class="card p-2 mb-3" id="note-add-form">
-                  <div class="form-group">
-                     <label for="add">Dodaj notatkę</label>
-                     <div class="input-group">
-                        <input
-                           type="text"
-                           id="note-add-input"
-                           class="form-control"
-                           placeholder="Dodaj..."
-                        />
-                        <div class="input-group-append">
-                           <button type="submit" class="btn btn-secondary">Dodaj</button>
-                        </div>
-                     </div>
-                  </div>
-               </form>
-               <ul class="list-group mb-3" id="notes-list"></ul>
-            </div>
-            <div class="col-md-8">
-               <h4 class="mb-3" id="note-title">Tytuł notatki</h4>
-               <div>
-                  <button type="button" class="btn btn-secondary" id="note-edit-btn">Edytor</button>
-                  <button type="button" class="btn btn-primary" id="note-preview-btn">
-                     Podgląd
-                  </button>
-                  <button type="button" class="btn btn-danger" id="note-remove-btn">Usuń</button>
-               </div>
-               <hr class="mb-4" />
-               <form id="note-content-btn">
-                  <textarea
-                     class="form-control mb-4"
-                     rows="10"
-                     placeholder="Treść notatki..."
-                     id="note-content"
-                  ></textarea>
-                  <div id="note-preview-element"></div>
-                  <hr class="mb-4" />
-                  <button class="btn btn-primary btn-lg btn-block" type="submit">
-                     Zapisz zmiany
-                  </button>
-               </form>
-            </div>
-         </div>
+<body>
+   <section class="container" id="view-container"></section>
+</body>
 
-         <footer class="my-5 pt-5 text-muted text-center text-small">
-            <p>&copy;2019 Michał Opałka</p>
-         </footer>
-      </div>
-   </body>
 </html>
