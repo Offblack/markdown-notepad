@@ -7,33 +7,30 @@ import {
 } from '../../utilities';
 import * as searchBox from './search-box';
 import * as addBox from './add-box';
-import * as notesActions from '../../notes-actions';
 
-const generateNoteHTML = note => {
-   return `<li class="list-group-item d-flex justify-content-between lh-condensed">
+const generateNoteHTML = (note, currentNoteId) => {
+   return `<a href="/editor/${note.id}" class="list-group-item list-group-item-action d-flex justify-content-between lh-condensed ${(currentNoteId === note.id) ? 'active' : ''}">
       <div>
          <h6 class="my-0">${note.title}</h6>
          <small class="text-muted">${format(note.lastModified, 'DD/MM/YYYY | HH:mm:ss')}</small>
       </div>
-   </li>`;
+   </a>`;
 };
 
-const generateNotesList = () => {
-   notesActions.getAll().then(notes => {
-      const html = notes.filter(note => normalizeText(note.title).includes(normalizeText(searchBox.getSearchPhrase())))
-         .map(note => generateNoteHTML(note))
-         .join('');
+const generateNotesList = (notes, currentNoteId) => {
+   const html = notes.filter(note => normalizeText(note.title).includes(normalizeText(searchBox.getSearchPhrase())))
+      .map(note => generateNoteHTML(note, currentNoteId))
+      .join('');
 
-      DOM().notesListEl.innerHTML = html;
-   })
-};
+   DOM().notesListEl.innerHTML = html;
+}
 
-const init = () => {
+const init = (notes, currentNoteId) => {
 
-   generateNotesList();
+   generateNotesList(notes, currentNoteId);
 
-   searchBox.init(() => generateNotesList());
-   addBox.init(() => generateNotesList());
+   searchBox.init(() => generateNotesList(notes, currentNoteId));
+   addBox.init(() => generateNotesList(notes, currentNoteId));
 
 }
 
