@@ -4,10 +4,10 @@
    "description": "",
    "main": "index.js",
    "scripts": {
-      "clean": "rimraf dist && mkdirp dist",
+      "clean": "rimraf docs && mkdirp docs",
       "start": "webpack-dev-server --mode development",
       "build": "npm run clean && webpack --mode production",
-      "start-api": "json-server --watch api/db.json --port 7001"
+      "start-api": "json-server --watch db.json --port 7001"
    },
    "author": "",
    "license": "ISC",

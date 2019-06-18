@@ -1,6 +1,9 @@
 import page from 'page';
 import * as routes from './routes';
 
+
+page.base('/markdown-notepad')
+
 page('/', routes.index);
 
 page('/editor', routes.editor);

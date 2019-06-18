@@ -9,22 +9,22 @@ module.exports = (env, options) => {
    return {
       entry: './src/index.js',
       output: {
-         path: path.resolve(__dirname, 'dist'),
+         path: path.resolve(__dirname, 'docs'),
          filename: 'bundle.js'
       },
 
       devtool: isProd ? false : 'source-map',
 
       module: {
-         rules: [
-            {
+         rules: [{
                test: /\.(scss|sass|css)$/,
                exclude: /node_modules/,
                use: ExtractTextPlugin.extract({
-                  use: [
-                     {
+                  use: [{
                         loader: 'css-loader',
-                        options: { sourceMap: isProd ? false : true }
+                        options: {
+                           sourceMap: isProd ? false : true
+                        }
                      },
                      {
                         loader: 'postcss-loader',
@@ -36,12 +36,16 @@ module.exports = (env, options) => {
                      },
                      {
                         loader: 'sass-loader',
-                        options: { sourceMap: isProd ? false : true }
+                        options: {
+                           sourceMap: isProd ? false : true
+                        }
                      }
                   ],
                   fallback: {
                      loader: 'style-loader',
-                     options: { sourceMap: isProd ? false : true }
+                     options: {
+                        sourceMap: isProd ? false : true
+                     }
                   },
                   publicPath: '../'
                })
@@ -56,8 +60,7 @@ module.exports = (env, options) => {
             {
                test: /\.(gif|png|jpe?g|svg)$/,
                exclude: /fonts?/,
-               use: [
-                  {
+               use: [{
                      loader: 'file-loader',
                      options: {
                         name: '[name].[ext]',
