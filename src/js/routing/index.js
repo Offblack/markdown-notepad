@@ -6,8 +6,8 @@ page.base('/markdown-notepad')
 
 page('/', routes.index);
 
-page('/editor', routes.editor);
-page('/editor/:id', routes.editor);
+page('/markdown-notepad/editor', routes.editor);
+page('/markdown-notepad/editor/:id', routes.editor);
 
 page('*', routes.notFound);
 page();
