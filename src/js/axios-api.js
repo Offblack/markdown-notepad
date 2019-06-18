@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-   baseURL: 'http://localhost:7001'
+   baseURL: 'http://my-json-server.typicode.com/Offblack//markdown-notepad'
 });
 
 export default instance;

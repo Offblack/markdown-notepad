@@ -7,9 +7,10 @@ import {
 } from '../../utilities';
 import * as searchBox from './search-box';
 import * as addBox from './add-box';
+import page from 'page';
 
 const generateNoteHTML = (note, currentNoteId, notes) => {
-   return `<a href="/editor/${
+   return `<a href="${page.base()}/editor/${
       note.id
    }" class="list-group-item list-group-item-action ${
       currentNoteId === note.id ? 'active' : ''
