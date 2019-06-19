@@ -3,6 +3,8 @@
 It's an online notepad. You can add, edit and delete your notes using Markdown - the simple and easy-to-use markup language.
 
 LIVE: https://offblack.github.io/markdown-notepad
+**It's working with a fake JSON data-base. 
+(To check real version download or clone repository.)**
 
 ![alt text](https://raw.githubusercontent.com/Offblack/markdown-notepad/master/screenshot.png)
 
@@ -23,10 +25,6 @@ Technologies:
 -  Sass
 -  Bootstrap 4
 -  API
-
-## Deployment
-
-It's working with a fake JSON data-base. (To check real version download or clone repository.)
 
 ## How to use it?
 
