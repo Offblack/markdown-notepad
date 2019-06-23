@@ -2,11 +2,11 @@
 
 It's an online notepad. You can add, edit and delete your notes using Markdown - the simple and easy-to-use markup language.
 
-LIVE: https://offblack.github.io/markdown-notepad
-
+LIVE:
 ```diff 
 - It's working with a fake JSON data-base. (To check real version download or clone repository.)
 ```
+ https://offblack.github.io/markdown-notepad
 
 ![alt text](https://raw.githubusercontent.com/Offblack/markdown-notepad/master/screenshot.png)
 
